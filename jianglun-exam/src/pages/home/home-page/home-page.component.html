@@ -1,0 +1,23 @@
+
+<button (click)="addBook()">添加书籍</button>
+<button (click)="ascPrice()">价格正序</button>
+<button (click)="descPrice()">价格逆序</button>
+<button (click)="random()">随机排序</button>
+
+<table align=center>
+    <caption>【书籍列表】</caption>
+    <tr bgcolor="#cccccc">
+     <th>序号</th>
+     <th>书名</th>
+     <th>作者</th>
+     <th>价格</th>
+     <th>摘要</th>
+    </tr>
+    <tr *ngFor="let book of books">
+     <td>{{book.index}}</td>
+     <td>{{book.bookName}}</td>
+     <td>{{book.author}}</td>
+     <td>{{book.price}}</td>
+     <td>{{book.summary}}</td>
+    </tr>
+</table>
